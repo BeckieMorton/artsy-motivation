@@ -14,8 +14,14 @@ export const Landing = () => {
 
   return (
     <div>
-      <p>Welcome</p>
+      <p>""Ignite Creativity, Inspire Literacy"</p>
       <p>
+        <p>Choose a genre to explore and to inspire</p>
+        <div className={styles.genreContainer}>
+          <div className={styles.genreBox}>box 1</div>
+          <div className={styles.genreBox}>box 2</div>
+          <div className={styles.genreBox}>box 3</div>
+        </div>
         <button onClick={handleClick}>Display artwork</button>
       </p>
     </div>
