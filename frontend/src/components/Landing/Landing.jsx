@@ -1,7 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import useArtworkStore from "../../stores/useArtworkStore";
+import { Button } from "../ReuseableComponents/Button";
+import { ArtTypeCard } from "../ReuseableComponents/ArtTypeCard";
 
 import styles from "./Landing.module.css";
 
@@ -18,11 +19,29 @@ export const Landing = () => {
       <p>
         <p>Choose a genre to explore and to inspire</p>
         <div className={styles.genreContainer}>
-          <div className={styles.genreBox}>box 1</div>
-          <div className={styles.genreBox}>box 2</div>
-          <div className={styles.genreBox}>box 3</div>
+          <div className={styles.genreBox}>
+            <ArtTypeCard cardText={"European Art"} cardImage={"european"} />
+          </div>
+          <div className={styles.genreBox}>
+            <ArtTypeCard cardText={"African Art"} cardImage={"african"} />
+          </div>
+          <div className={styles.genreBox}>
+            <ArtTypeCard cardText={"Photography"} cardImage={"photographs"} />
+          </div>
+          <div className={styles.genreBox}>
+            <ArtTypeCard
+              cardText={"Greek Roman Art"}
+              cardImage={"greekroman"}
+            />
+          </div>
+          <div className={styles.genreBox}>
+            <ArtTypeCard cardText={"Asian Art"} cardImage={"asia"} />
+          </div>
+          <div className={styles.genreBox}>
+            <ArtTypeCard cardText={"Medieval"} cardImage={"medieval"} />
+          </div>
         </div>
-        <button onClick={handleClick}>Display artwork</button>
+        <Button handleClick={handleClick} buttonText={"Display artwork"} />
       </p>
     </div>
   );

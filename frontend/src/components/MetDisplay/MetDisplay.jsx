@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { Button } from "../../components/ReuseableComponents/Button";
 import styles from "./MetDisplay.module.css";
 
 export const MetDisplay = () => {
@@ -11,6 +12,7 @@ export const MetDisplay = () => {
   const [artistBio, setArtistBio] = useState("");
   const [image, setImage] = useState("");
   const [classificationTitle, setClassificationTitle] = useState("");
+  const [objectName, setObjectName] = useState("");
   const [departmentTitle, setDepartmentTitle] = useState("");
   const [medium, setMedium] = useState("testing baby");
   const randomArtworkId = Math.floor(Math.random() * 88000) + 1;
@@ -21,7 +23,7 @@ export const MetDisplay = () => {
 
   console.log(thisAPI);
 
-  const maxRetries = 5; // Set your desired maximum number of retries
+  const maxRetries = 5;
 
   const fetchArtInfo = async () => {
     let retries = 0;
@@ -30,6 +32,8 @@ export const MetDisplay = () => {
     while (retries < maxRetries && !success) {
       const randomArtworkId = Math.floor(Math.random() * 90000) + 1;
       const thisAPI = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${randomArtworkId}`;
+      const paintings = `https://collectionapi.metmuseum.org/public/collection/v1/search?departmentId=6&q=paint`;
+      //modern art department id is 21
 
       //EXAMPLE URL: https://api.artic.edu/api/v1/artworks/129884?fields=id,title,artist_display,image_id,artwork_type_title,is_public_domain
 
@@ -67,6 +71,7 @@ export const MetDisplay = () => {
     setMedium(artwork.medium);
     setClassificationTitle(artwork.classification);
     setDepartmentTitle(artwork.department);
+    setObjectName(artwork.objectName);
     console.log(artwork);
   }, [artwork]);
 
@@ -75,10 +80,12 @@ export const MetDisplay = () => {
   };
 
   return (
-    <div>
-      <h1>Met Art API</h1>
+    <div className="bg-white overflow-hidden ">
+      <h1 className="text-center mb-4 text-4xl leading-none tracking-tight text-blue-600 md:text-5xl p-3">
+        Met Art API
+      </h1>
       <p>
-        <button onClick={fetchArtInfo}>Generate artwork</button>
+        <Button handleClick={fetchArtInfo} buttonText={"Generate artwork"} />
       </p>
       <p>
         <img src={image} alt={title} />
@@ -88,8 +95,9 @@ export const MetDisplay = () => {
       <p>Medium: {medium}</p>
       <p>Classification: {classificationTitle}</p>
       <p>Department: {departmentTitle}</p>
+      <p>Object name: {objectName}</p>
       <p>
-        <button onClick={handleClick}>Back</button>
+        <Button handleClick={handleClick} buttonText={"Back"} />
       </p>
     </div>
   );
