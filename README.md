@@ -1,10 +1,10 @@
-# Express API Starter Project
+# Artsy Motivation - Personal Project
 
-This project includes the packages and babel setup for an express server, and is just meant to make things a little simpler to get up and running with.
+A SPA using the Metropolitan Museum of Arts free API to display random artworks. Built to be used in classrooms to use in learning experiences to encourage and insipre writing and art with visual prompts. (eg. see www.onceuponapicture.com)
 
-## Getting started
+## Tech
 
-Install dependencies with `npm install`, then start the server by running `npm run dev`
+
 
 ## View it live
 
