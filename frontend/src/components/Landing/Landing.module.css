@@ -1,0 +1,8 @@
+.genreContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.genreBox {
+  border: 1px solid green;
+}

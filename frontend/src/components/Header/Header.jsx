@@ -4,7 +4,9 @@ import styles from "./Header.module.css";
 export const Header = () => {
   return (
     <div className={styles.headerContainer}>
-      <p>Header</p>
+      <p>
+        <img src="./assets/header.png" alt="artsy motivation" />
+      </p>
     </div>
   );
 };
