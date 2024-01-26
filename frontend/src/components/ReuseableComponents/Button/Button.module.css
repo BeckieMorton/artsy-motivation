@@ -1,0 +1,72 @@
+.button {
+  background-color: white;
+  border: 2px solid red;
+  border-radius: 8px;
+  color: blue;
+  padding: 8px 16px;
+  margin: 8px;
+}
+
+.button:hover {
+  background-color: yellow;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 220.52px;
+  min-height: 56px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 0.5s linear;
+}
+
+span {
+  font-size: 30px;
+  font-weight: 700;
+  padding: 0 10px;
+}
+
+.ionIcon {
+  font-size: 2em;
+  transition: all 0.5s linear;
+}
+
+.btn:hover ion-icon {
+  transform: rotate(-90deg);
+}
+
+div {
+  position: relative;
+}
+
+.btn {
+  /* background: #0ebac5; */
+  background: none;
+  color: black;
+}
+
+.btn::before {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 50%;
+  background-color: #eec759;
+  position: absolute;
+  border-radius: 100px;
+  left: 9em;
+  z-index: -1;
+  transition: all 600ms ease;
+}
+
+.btn:hover::before {
+  width: calc(100% - 18em);
+}
+
+.btn:hover .ionIcon {
+  transform: translateX(10px);
+}

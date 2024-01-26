@@ -1,4 +1,13 @@
 .headerContainer {
   border-bottom: 1px solid green;
-  width: 100%;
+
+  align-items: center;
+  text-align: center;
+}
+
+.headerContainer img {
+  padding: 0;
+  align-items: center;
+  text-align: center;
+  max-width: 100%;
 }

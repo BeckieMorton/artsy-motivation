@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { Button } from "../../components/ReuseableComponents/Button";
+import { Button } from "../ReuseableComponents/Button/Button";
 import styles from "./MetDisplay.module.css";
 
 export const MetDisplay = () => {
@@ -80,10 +80,8 @@ export const MetDisplay = () => {
   };
 
   return (
-    <div className="bg-white overflow-hidden ">
-      <h1 className="text-center mb-4 text-4xl leading-none tracking-tight text-blue-600 md:text-5xl p-3">
-        Met Art API
-      </h1>
+    <div className={styles.artContainer}>
+      <h1>Met Art API</h1>
       <p>
         <Button handleClick={fetchArtInfo} buttonText={"Generate artwork"} />
       </p>

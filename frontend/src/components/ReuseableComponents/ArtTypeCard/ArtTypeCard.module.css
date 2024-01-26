@@ -1,0 +1,41 @@
+.artCardContainer {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+}
+
+.genreText {
+  position: absolute;
+  top: 30%;
+  left: 68%;
+  transform: translate(-50%, -50%);
+  padding-left: 0.5em;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+}
+
+.artCardContainer:hover .genreText {
+  opacity: 1;
+}
+
+.genreImage {
+  display: block; /* Ensures the image behaves like a block element */
+  max-width: 100%; /* Ensures the image doesn't exceed its container's width */
+  height: auto; /* Allows the image to maintain its aspect ratio */
+}
+
+.artCardContainer img {
+  height: 100%;
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+.artCardContainer:hover img {
+  opacity: 0.2;
+  /*filter: brightness(20%);*/
+}

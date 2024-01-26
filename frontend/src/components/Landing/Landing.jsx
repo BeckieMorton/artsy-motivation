@@ -1,8 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { Button } from "../ReuseableComponents/Button";
-import { ArtTypeCard } from "../ReuseableComponents/ArtTypeCard";
+import { Button } from "../ReuseableComponents/Button/Button";
+import { ArtTypeCard } from "../ReuseableComponents/ArtTypeCard/ArtTypeCard";
 
 import styles from "./Landing.module.css";
 
@@ -43,7 +42,6 @@ export const Landing = () => {
         </div>
         <Button handleClick={handleClick} buttonText={"Display artwork"} />
       </p>
-      <p className="hover:text-red">hover over me</p>
     </div>
   );
 };
