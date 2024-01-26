@@ -43,6 +43,7 @@ export const Landing = () => {
         </div>
         <Button handleClick={handleClick} buttonText={"Display artwork"} />
       </p>
+      <p className="hover:text-red">hover over me</p>
     </div>
   );
 };
