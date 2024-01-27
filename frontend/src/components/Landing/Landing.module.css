@@ -1,7 +1,26 @@
+.desktopView {
+  display: block;
+}
+
 .genreContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   max-width: 100%;
   margin: 0 auto;
   overflow: hidden;
+}
+
+.mobileView {
+  display: none;
+}
+
+/* media query for mobile and tablet */
+@media screen and (max-width: 824px) {
+  .mobileView {
+    display: block;
+  }
+
+  .desktopView {
+    display: none;
+  }
 }

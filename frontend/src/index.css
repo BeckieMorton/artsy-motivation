@@ -3,8 +3,6 @@
 :root {
   margin: 0;
   font-family: "Roboto Mono", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -12,7 +10,5 @@ body {
   color: #252525;
   font-weight: 400;
   background-color: #fcfbf7;
-  border-bottom: 1.6rem solid #eec759;
   min-height: 100vh;
-  padding: 3em 2em 6rem 2em;
 }

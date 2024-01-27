@@ -4,6 +4,7 @@ import { Button } from "../ReuseableComponents/Button/Button";
 import { ArtTypeCard } from "../ReuseableComponents/ArtTypeCard/ArtTypeCard";
 
 import styles from "./Landing.module.css";
+import { MobileView } from "../../pages/MobileView/MobileView";
 
 export const Landing = () => {
   const navigate = useNavigate();
@@ -13,35 +14,42 @@ export const Landing = () => {
   };
 
   return (
-    <div>
-      <p>""Ignite Creativity, Inspire Literacy"</p>
-      <p>
-        <p>Choose a genre to explore and to inspire</p>
-        <div className={styles.genreContainer}>
-          <div className={styles.genreBox}>
-            <ArtTypeCard cardText={"European Art"} cardImage={"european"} />
+    <>
+      <div className={styles.desktopView}>
+        <p style={{ fontWeight: "bold" }}>
+          "Ignite Creativity, Inspire Literacy"
+        </p>
+        <p>
+          <p>Choose a genre to explore and to inspire</p>
+          <div className={styles.genreContainer}>
+            <div className={styles.genreBox}>
+              <ArtTypeCard cardText={"European Art"} cardImage={"european"} />
+            </div>
+            <div className={styles.genreBox}>
+              <ArtTypeCard cardText={"African Art"} cardImage={"african"} />
+            </div>
+            <div className={styles.genreBox}>
+              <ArtTypeCard cardText={"Photography"} cardImage={"photographs"} />
+            </div>
+            <div className={styles.genreBox}>
+              <ArtTypeCard
+                cardText={"Greek Roman Art"}
+                cardImage={"greekroman"}
+              />
+            </div>
+            <div className={styles.genreBox}>
+              <ArtTypeCard cardText={"Asian Art"} cardImage={"asia"} />
+            </div>
+            <div className={styles.genreBox}>
+              <ArtTypeCard cardText={"Medieval"} cardImage={"medieval"} />
+            </div>
           </div>
-          <div className={styles.genreBox}>
-            <ArtTypeCard cardText={"African Art"} cardImage={"african"} />
-          </div>
-          <div className={styles.genreBox}>
-            <ArtTypeCard cardText={"Photography"} cardImage={"photographs"} />
-          </div>
-          <div className={styles.genreBox}>
-            <ArtTypeCard
-              cardText={"Greek Roman Art"}
-              cardImage={"greekroman"}
-            />
-          </div>
-          <div className={styles.genreBox}>
-            <ArtTypeCard cardText={"Asian Art"} cardImage={"asia"} />
-          </div>
-          <div className={styles.genreBox}>
-            <ArtTypeCard cardText={"Medieval"} cardImage={"medieval"} />
-          </div>
-        </div>
-        <Button handleClick={handleClick} buttonText={"Display artwork"} />
-      </p>
-    </div>
+          <Button handleClick={handleClick} buttonText={"Display artwork"} />
+        </p>
+      </div>
+      <div className={styles.mobileView}>
+        <MobileView />
+      </div>
+    </>
   );
 };

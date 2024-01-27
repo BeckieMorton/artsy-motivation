@@ -1,4 +1,9 @@
 .footerContainer {
-  border-bottom: 1px solid green;
   max-width: 100%;
+  background-color: #eec759;
+}
+
+.footerContainer p {
+  font-size: 10px;
+  padding: 2em;
 }
