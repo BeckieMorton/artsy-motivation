@@ -4,7 +4,11 @@ A SPA using the Metropolitan Museum of Arts free API to display random artworks.
 
 ## Tech
 
+HTML, CSS, React, React Router, RestAPIs, Lottie Animations, 
 
+## API
+
+https://github.com/metmuseum/openaccess
 
 ## View it live
 
