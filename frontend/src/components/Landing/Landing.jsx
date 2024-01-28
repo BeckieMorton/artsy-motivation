@@ -20,7 +20,9 @@ export const Landing = () => {
           "Ignite Creativity, Inspire Literacy"
         </p>
         <p>
-          <p>Choose a genre to explore and to inspire</p>
+          <p className={styles.genreTxt}>
+            Choose a genre to explore and to inspire
+          </p>
           <div className={styles.genreContainer}>
             <div className={styles.genreBox}>
               <Link to="/european">

@@ -11,16 +11,28 @@
 }
 
 .mobileView {
-  display: none;
+  display: block;
 }
 
 /* media query for mobile and tablet */
 @media screen and (max-width: 824px) {
   .mobileView {
-    display: block;
+    display: none;
+  }
+
+  .genreContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
   }
 
   .desktopView {
-    display: none;
+    display: block;
+  }
+
+  .genreTxt {
+    font-size: 10px;
   }
 }
