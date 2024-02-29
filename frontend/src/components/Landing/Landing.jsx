@@ -67,7 +67,6 @@ export const Landing = () => {
               </Link>
             </div>
           </div>
-          <Button handleClick={handleClick} buttonText={"Display artwork"} />
         </p>
       </div>
       <div className={styles.mobileView}>
