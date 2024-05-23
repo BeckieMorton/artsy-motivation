@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { Button } from "../ReuseableComponents/Button/Button";
 import { ArtTypeCard } from "../ReuseableComponents/ArtTypeCard/ArtTypeCard";
 
 import styles from "./Landing.module.css";
