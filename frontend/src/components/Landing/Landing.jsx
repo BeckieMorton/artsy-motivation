@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { ArtTypeCard } from "../ReuseableComponents/ArtTypeCard/ArtTypeCard";
+import { GenreLandingCard } from "../ReuseableComponents/GenreLandingCard/GenreLandingCard";
 
 import styles from "./Landing.module.css";
 import { MobileView } from "../../pages/MobileView/MobileView";
@@ -25,7 +25,7 @@ export const Landing = () => {
           <div className={styles.genreContainer}>
             <div className={styles.genreBox}>
               <Link to="/european">
-                <ArtTypeCard
+                <GenreLandingCard
                   cardText={"European Paintings"}
                   cardImage={"european"}
                 />
@@ -33,7 +33,7 @@ export const Landing = () => {
             </div>
             <div className={styles.genreBox}>
               <Link to="/african">
-                <ArtTypeCard
+                <GenreLandingCard
                   cardText={"Africa, Oceania, and the Americas"}
                   cardImage={"african"}
                 />
@@ -41,7 +41,7 @@ export const Landing = () => {
             </div>
             <div className={styles.genreBox}>
               <Link to="/photography">
-                <ArtTypeCard
+                <GenreLandingCard
                   cardText={"Photography"}
                   cardImage={"photographs"}
                 />
@@ -49,7 +49,7 @@ export const Landing = () => {
             </div>
             <div className={styles.genreBox}>
               <Link to="/greekroman">
-                <ArtTypeCard
+                <GenreLandingCard
                   cardText={"Greek Roman Art"}
                   cardImage={"greekroman"}
                 />
@@ -57,12 +57,15 @@ export const Landing = () => {
             </div>
             <div className={styles.genreBox}>
               <Link to="/asian">
-                <ArtTypeCard cardText={"Asian Art"} cardImage={"asia"} />
+                <GenreLandingCard cardText={"Asian Art"} cardImage={"asia"} />
               </Link>
             </div>
             <div className={styles.genreBox}>
               <Link to="/medieval">
-                <ArtTypeCard cardText={"Medieval"} cardImage={"medieval"} />
+                <GenreLandingCard
+                  cardText={"Medieval"}
+                  cardImage={"medieval"}
+                />
               </Link>
             </div>
           </div>

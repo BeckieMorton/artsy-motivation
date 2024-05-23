@@ -1,6 +1,6 @@
-import styles from "./ArtTypeCard.module.css";
+import styles from "./GenreLandingCard.module.css";
 
-export const ArtTypeCard = ({ cardText, handleClick, cardImage }) => {
+export const GenreLandingCard = ({ cardText, handleClick, cardImage }) => {
   return (
     <div className={styles.artCardContainer}>
       <p className={styles.genreText}>{cardText}</p>

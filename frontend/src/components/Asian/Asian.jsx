@@ -2,21 +2,14 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { Button } from "../ReuseableComponents/Button/Button";
+import { DisplayArtworkCard } from "../ReuseableComponents/DisplayArtworkCard/DisplayArtworkCard";
+
 import styles from "./Asian.module.css";
 
 export const Asian = () => {
   const navigate = useNavigate();
   const [asianIds, setAsianIds] = useState([]);
   const [artwork, setArtwork] = useState([]);
-  const {
-    title,
-    artistDisplayName,
-    primaryImage,
-    medium,
-    classification,
-    department,
-    objectName,
-  } = artwork;
 
   //https://collectionapi.metmuseum.org/public/collection/v1/objects/55757
   //https://collectionapi.metmuseum.org/public/collection/v1/departments - see here for lists of departments
@@ -76,18 +69,7 @@ export const Asian = () => {
       <p>
         <Button handleClick={fetchArtInfo} buttonText={"Generate artwork"} />
       </p>
-      <p>
-        {primaryImage && (
-          <img className={styles.artImage} src={primaryImage} alt={title} />
-        )}
-      </p>
-
-      <p>title: {title}</p>
-      <p>Artist: {artistDisplayName}</p>
-      <p>Medium: {medium}</p>
-      <p>Classification: {classification}</p>
-      <p>Department: {department}</p>
-      <p>Object name: {objectName}</p>
+      <DisplayArtworkCard artwork={artwork} />
       <p>
         <Button handleClick={handleClick} buttonText={"Back"} />
       </p>

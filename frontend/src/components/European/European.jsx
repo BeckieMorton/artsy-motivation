@@ -2,30 +2,14 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { Button } from "../ReuseableComponents/Button/Button";
+import { DisplayArtworkCard } from "../ReuseableComponents/DisplayArtworkCard/DisplayArtworkCard";
+
 import styles from "./European.module.css";
 
 export const European = () => {
   const navigate = useNavigate();
   const [europeanIds, setEuropeanIds] = useState([]);
   const [artwork, setArtwork] = useState([]);
-  // const [title, setTitle] = useState("");
-  const [artist, setArtist] = useState("");
-  const [artistBio, setArtistBio] = useState("");
-  const [image, setImage] = useState("");
-  const [classificationTitle, setClassificationTitle] = useState("");
-  // const [objectName, setObjectName] = useState("");
-  const [departmentTitle, setDepartmentTitle] = useState("");
-  // const [medium, setMedium] = useState("testing baby");
-  const {
-    title,
-    artistDisplayName,
-    artistDisplayBio,
-    primaryImage,
-    medium,
-    classification,
-    department,
-    objectName,
-  } = artwork;
 
   //https://collectionapi.metmuseum.org/public/collection/v1/objects/55757
 
@@ -74,18 +58,6 @@ export const European = () => {
     }
   };
 
-  // useEffect(() => {
-  //   setTitle(artwork.title);
-  //   setArtist(artwork.artistDisplayName);
-  //   setArtistBio(artwork.artistDisplayBio);
-  //   setImage(artwork.primaryImage);
-  //   setMedium(artwork.medium);
-  //   setClassificationTitle(artwork.classification);
-  //   setDepartmentTitle(artwork.department);
-  //   setObjectName(artwork.objectName);
-  //   console.log(artwork);
-  // }, [artwork]);
-
   const handleClick = () => {
     navigate("/");
   };
@@ -96,18 +68,7 @@ export const European = () => {
       <p>
         <Button handleClick={fetchArtInfo} buttonText={"Generate artwork"} />
       </p>
-      <p>
-        {primaryImage && (
-          <img className={styles.artImage} src={primaryImage} alt={title} />
-        )}
-      </p>
-
-      <p>title: {title}</p>
-      <p>Artist: {artistDisplayName}</p>
-      <p>Medium: {medium}</p>
-      <p>Classification: {classification}</p>
-      <p>Department: {department}</p>
-      <p>Object name: {objectName}</p>
+      <DisplayArtworkCard artwork={artwork} />
       <p>
         <Button handleClick={handleClick} buttonText={"Back"} />
       </p>
