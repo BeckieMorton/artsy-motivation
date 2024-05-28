@@ -66,10 +66,11 @@ export const Asian = () => {
   return (
     <div className={styles.artContainer}>
       <h1>Asian Art</h1>
+
+      <DisplayArtworkCard artwork={artwork} />
       <p>
         <Button handleClick={fetchArtInfo} buttonText={"Generate artwork"} />
       </p>
-      <DisplayArtworkCard artwork={artwork} />
       <p>
         <Button handleClick={handleClick} buttonText={"Back"} />
       </p>

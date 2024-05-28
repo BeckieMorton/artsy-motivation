@@ -1,7 +1,7 @@
 .button {
-  background-color: green;
+  background-color: #eec759;
   border-radius: 18px;
-  color: #fcfbf7;
+  color: black;
   padding: 12px 24px;
   margin: 8px;
   border: none;
@@ -11,7 +11,7 @@
 }
 
 .button:hover {
-  background-color: #eec759;
+  background-color: green;
   transition: transform 0.3s ease-in-out;
   transform: scale(1.1);
 }
