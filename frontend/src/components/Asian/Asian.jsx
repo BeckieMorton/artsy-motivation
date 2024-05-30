@@ -16,14 +16,14 @@ export const Asian = () => {
 
   //department ID for "Asian Art" is 6
 
-  const africanAPI =
+  const asianAPI =
     "https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=6";
 
   //first fetch array of object ids from all european artworks
   useEffect(() => {
     const fetchAsianPaintings = async () => {
       try {
-        const response = await fetch(africanAPI);
+        const response = await fetch(asianAPI);
         if (!response.ok) {
           throw new Error("Network Response Error");
         }
@@ -38,7 +38,7 @@ export const Asian = () => {
   }, []);
 
   const fetchArtInfo = async () => {
-    //assign a random object from the european objects  to randomId to display
+    //assign a random object from the asian objects  to randomId to display
     const randomId = asianIds[Math.floor(Math.random() * asianIds.length)];
 
     console.log(`random id:`, randomId);
