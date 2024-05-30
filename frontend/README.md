@@ -1,8 +1,22 @@
-# React + Vite
+# Artsy Motivation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I really enjoy discovering free API's and seeing what I can do with them. A website I used a lot while teaching was the inspiration for this little personal project. https://www.onceuponapicture.co.uk/
 
-Currently, two official plugins are available:
+A simple application using React Router to display artwork from the Public API of The Metropolitan Museum of Art. I created a simple UX Design with hover effects and reusable button components.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Technologies used
+
+HTML, CSS, JavaScript, React, ReactRouter, ReactHooks (useState, useEffect), reuseable components
+
+### API's
+
+The Metropolitan Museum of Art Collection API
+https://metmuseum.github.io/
+
+API examples:
+https://collectionapi.metmuseum.org/public/collection/v1/objects/55757
+//https://collectionapi.metmuseum.org/public/collection/v1/departments - see here for lists of departments
+
+### View it live
+
+https://artsy-motivation.netlify.app/
